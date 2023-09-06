@@ -15,34 +15,7 @@ probably proofread and complete it, then remove this comment. -->
 Los pesos del modelo se pueden descargar desde  [zoukagh/bert-base-iz-spain-uncased](https://huggingface.co/zoukagh/bert-base-iz-spain-uncased)
 Este modelo se ha entrenado con gran corpus de texto de wikipedia , TED, DGT , 
 
- [MASK] mas seis es igual a diez. 
-
-This model is a fine-tuned version of [zoukagh/bert-base-iz-spain-uncased](https://huggingface.co/zoukagh/bert-base-iz-spain-uncased) on an unknown dataset.
-It achieves the following results on the evaluation set:
-- Train Loss: 0.1302
 - Steps: 2M 👷🏗️🚧
 
-## Model description
-
-More information needed
-
-## Intended uses & limitations
-
-More information needed
-
-## Training and evaluation data
-
-More information needed
-
-## Training procedure
-
-### Training hyperparameters
-
-
-### Training results
-
-
- 
 ### Framework versions
-
 - TensorFlow 2.12.0
