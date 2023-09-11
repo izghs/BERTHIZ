@@ -90,8 +90,7 @@ This bias will also affect all fine-tuned versions of this model.
 
 ## Training data
 
-The BERT model was pretrained on [BookCorpus](https://yknzhu.wixsite.com/mbweb), a dataset consisting of 11,038
-unpublished books and [Spanish Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and
+The BERT model was pretrained on CC100 and Spanish Wikipedia dump (excluding lists, tables and
 headers).
 
 ## Training procedure
