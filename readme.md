@@ -61,43 +61,21 @@ You can use this model directly with a pipeline for masked language modeling:
 
 ```python
 >>> from transformers import pipeline
->>> unmasker = pipeline('fill-mask', model='bert-base-uncased')
->>> unmasker("Hello I'm a [MASK] model.")
+>>> unmasker = pipeline('fill-mask', model='zoukagh/bert-base-iz-spain-uncased')
+>>> unmasker("protocolo de mensajeria mas usado es el [MASK].")
 
-[{'sequence': "[CLS] hello i'm a fashion model. [SEP]",
+[{'sequence': "[CLS] protocolo de mensajeria mas usado es el sms [SEP]",
   'score': 0.1073106899857521,
   'token': 4827,
-  'token_str': 'fashion'},
- {'sequence': "[CLS] hello i'm a role model. [SEP]",
+  'token_str': 'sms'},
+ {'sequence': "[CLS] protocolo de mensajeria mas usado es el email [SEP]",
   'score': 0.08774490654468536,
   'token': 2535,
-  'token_str': 'role'},
- {'sequence': "[CLS] hello i'm a new model. [SEP]",
-  'score': 0.05338378623127937,
-  'token': 2047,
-  'token_str': 'new'},
- {'sequence': "[CLS] hello i'm a super model. [SEP]",
-  'score': 0.04667217284440994,
-  'token': 3565,
-  'token_str': 'super'},
- {'sequence': "[CLS] hello i'm a fine model. [SEP]",
-  'score': 0.027095865458250046,
-  'token': 2986,
-  'token_str': 'fine'}]
+  'token_str': 'email'}]
 ```
 
-Here is how to use this model to get the features of a given text in PyTorch:
 
-```python
-from transformers import BertTokenizer, BertModel
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = BertModel.from_pretrained("bert-base-uncased")
-text = "Replace me by any text you'd like."
-encoded_input = tokenizer(text, return_tensors='pt')
-output = model(**encoded_input)
-```
-
-and in TensorFlow:
+ TensorFlow:
 
 ```python
 from transformers import BertTokenizer, TFBertModel
@@ -106,61 +84,6 @@ model = TFBertModel.from_pretrained("zoukagh/bert-base-iz-spain-uncased")
 text = "Replace me by any text you'd like."
 encoded_input = tokenizer(text, return_tensors='tf')
 output = model(encoded_input)
-```
-
-### Limitations and bias
-
-Even if the training data used for this model could be characterized as fairly neutral, this model can have biased
-predictions:
-
-```python
->>> from transformers import pipeline
->>> unmasker = pipeline('fill-mask', model='zoukagh/bert-base-iz-spain-uncased')
->>> unmasker("The man worked as a [MASK].")
-
-[{'sequence': '[CLS] the man worked as a carpenter. [SEP]',
-  'score': 0.09747550636529922,
-  'token': 10533,
-  'token_str': 'carpenter'},
- {'sequence': '[CLS] the man worked as a waiter. [SEP]',
-  'score': 0.0523831807076931,
-  'token': 15610,
-  'token_str': 'waiter'},
- {'sequence': '[CLS] the man worked as a barber. [SEP]',
-  'score': 0.04962705448269844,
-  'token': 13362,
-  'token_str': 'barber'},
- {'sequence': '[CLS] the man worked as a mechanic. [SEP]',
-  'score': 0.03788609802722931,
-  'token': 15893,
-  'token_str': 'mechanic'},
- {'sequence': '[CLS] the man worked as a salesman. [SEP]',
-  'score': 0.037680890411138535,
-  'token': 18968,
-  'token_str': 'salesman'}]
-
->>> unmasker("The woman worked as a [MASK].")
-
-[{'sequence': '[CLS] the woman worked as a nurse. [SEP]',
-  'score': 0.21981462836265564,
-  'token': 6821,
-  'token_str': 'nurse'},
- {'sequence': '[CLS] the woman worked as a waitress. [SEP]',
-  'score': 0.1597415804862976,
-  'token': 13877,
-  'token_str': 'waitress'},
- {'sequence': '[CLS] the woman worked as a maid. [SEP]',
-  'score': 0.1154729500412941,
-  'token': 10850,
-  'token_str': 'maid'},
- {'sequence': '[CLS] the woman worked as a prostitute. [SEP]',
-  'score': 0.037968918681144714,
-  'token': 19215,
-  'token_str': 'prostitute'},
- {'sequence': '[CLS] the woman worked as a cook. [SEP]',
-  'score': 0.03042375110089779,
-  'token': 5660,
-  'token_str': 'cook'}]
 ```
 
 This bias will also affect all fine-tuned versions of this model.
