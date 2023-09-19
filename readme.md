@@ -122,13 +122,4 @@ of 256. The sequence length was limited to 128 tokens for 90% of the steps and 5
 used is Adam with a learning rate of 1e-4, \\(\beta_{1} = 0.9\\) and \\(\beta_{2} = 0.999\\), a weight decay of 0.01,
 learning rate warmup for 10,000 steps and linear decay of the learning rate after.
 
-## Evaluation results
-
-When fine-tuned on downstream tasks, this model achieves the following results:
-
-Glue test results:
-
-| Task | MNLI-(m/mm) | QQP  | QNLI | SST-2 | CoLA | STS-B | MRPC | RTE  | Average |
-|:----:|:-----------:|:----:|:----:|:-----:|:----:|:-----:|:----:|:----:|:-------:|
-|      | 84.6/83.4   | 71.2 | 90.5 | 93.5  | 52.1 | 85.8  | 88.9 | 66.4 | 79.6    |
 
