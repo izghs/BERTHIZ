@@ -1,10 +1,8 @@
 ---
 base_model: zoukagh/bert-base-iz-spain-uncased
-model-index:
-- name: bert-base-iz-spain-uncased
-  results: []
-language:
-- es
+model-index: bert-base-iz-spain-uncased
+
+language: es
 pipeline_tag: fill-mask
 ---
   
