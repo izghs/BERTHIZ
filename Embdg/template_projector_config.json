@@ -6,8 +6,7 @@
         1000,
         50
       ],
-      "tensorPath": "https://raw.githubusercontent.com/.../tensors.tsv",
-      "metadataPath": "https://raw.githubusercontent.com/.../optional.metadata.tsv"
+      "tensorPath": "https://media.githubusercontent.com/media/izghs/Berthiz/main/Embdg/embeddings_ok.tsv",
+      "metadataPath": "https://media.githubusercontent.com/media/izghs/Berthiz/main/Embdg/metadata.tsv"
     }
   ]
-}
