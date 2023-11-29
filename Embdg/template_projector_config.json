@@ -1,7 +1,7 @@
 {
   "embeddings": [
     {
-      "tensorName": "My tensor",
+      "tensorName": "BEThiz",
       "tensorShape": [
         1000,
         50
