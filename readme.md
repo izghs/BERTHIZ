@@ -10,7 +10,7 @@ pipeline_tag: fill-mask
 probably proofread and complete it, then remove this comment. -->
 
 # BEThiz spanish bert base uncased
-Los pesos del modelo se pueden descargar desde  [zoukagh/bert-base-iz-spain-uncased](https://huggingface.co/zoukagh/bert-base-iz-spain-uncased)
+Los pesos del modelo se pueden descargar desde  [zoukagh/bert-base-iz-spain-uncased](https://huggingface.co/zoukagh/BEThiz-spanish-bert-base-uncased)
 Este modelo se ha entrenado con gran corpus de texto de wikipedia , TED, DGT , 
 
 - Steps: 2M 👷🏗️🚧
