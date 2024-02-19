@@ -1,5 +1,5 @@
 ---
-base_model: zoukagh/bert-base-iz-spain-uncased
+base_model: zoukagh/BEThiz-spanish-bert-base-uncased
 model-index: bert-base-iz-spain-uncased
 
 language: es
