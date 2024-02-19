@@ -1,10 +1,4 @@
----
-base_model: zoukagh/BEThiz-spanish-bert-base-uncased
-model-index: bert-base-iz-spain-uncased
 
-language: es
-pipeline_tag: fill-mask
----
   
 <!-- This model card has been generated automatically according to the information Keras had access to. You should
 probably proofread and complete it, then remove this comment. -->
